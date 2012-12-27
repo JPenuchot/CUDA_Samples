@@ -19,34 +19,36 @@
 
 //	SUMARRY :
 //	
-//	Variables names :			- h_(varname)		= HOST (CPU) variable
+//	Variable names :			- h_(varname)		= HOST (CPU) variable
 //								- d_(varname)		= DEVICE (GPU) variable
 //								- no prefix			= Local variables (They are not transferred between the CPU and the GPU inside the block)
 //
-//	Variables/Matrix usage :	- Mat[]				= The sum of each value of each cell of this virtual matrix gives the area of the quarter disk
+//	Variables/Matrix usage :	- Mat[]				= The sum of the values of each cell of this virtual matrix gives the area of the quarter disk
 //								- vCellsPerThread	= Number of virtual cells for each thread (One thread checks for several cells)
-//								- MatX/MatY			= Matrix dimensions (Blocks * Threads)
-//								- Area				= Sum of each value of each cell of Mat[] after computing
+//								- MatX/MatY			= Matrix' dimensions (Blocks * Threads)
+//								- Area				= Sum of the values of each cell of Mat[] after computing
 //								- Pi				= Approx value of Pi
 //								- SQGridSize		= Stands for Square Grid Size, it is the area of the virtual grid (MatX * MatY * vCellsPerThread * vCellsPerThread)
 //								- MatSize			= Size of the 400 cells matrix
 //
-//	CUDA variables/functions :	- blockIdx			= vec3 struct giving you the position of the block the kernel is located in
-//								- threadIdx			= vec3 struct giving you the position of the thread inside the block the kernel is located in
+//	CUDA variables/functions :	- blockIdx			= vec3 struct giving you the position of the block the kernel runs in
+//								- threadIdx			= vec3 struct giving you the position of the thread inside the block the kernel runs in
 //								- cudaMalloc()		= Simillar to malloc(), but allocs memory on the graphics card
 //								- cudaMemCpy()		= Used to copy content from GPU to CPU and vice versa
+//
 
+//	CODE :
 
 // This is the kernel running on the GPU. It is pretty basic, it checks for each case if it is inside or outside the quarter disk
-__global__ void MatComputing( double Mat[],  int *vCellsPerThread,  int *MatX,  int *MatY) {
+__global__ void MatComputing(double Mat[],  int *vCellsPerThread,  int *MatX,  int *MatY) {
 
-	// Getting the position of the kernel and the grid size
+	// Getting the position of the kernel inside the thread and the virtual grid size
 	int	Pos = blockIdx.x * blockDim.x + threadIdx.x,
 		SQGridSize = *MatX * *MatY * *vCellsPerThread * *vCellsPerThread;
 
 	Mat[Pos] = 0;
 
-	// This tests each cell to know if it is or not inside the quarter disk
+	// This tests each cell to know if it is inside the quarter disk or not
 	for(double i = blockIdx.x * *vCellsPerThread; i < (blockIdx.x * *vCellsPerThread) + *vCellsPerThread; i++)
 		for(double j = threadIdx.x * *vCellsPerThread; j < (threadIdx.x * *vCellsPerThread) + *vCellsPerThread; j++)
 			if((i * i) + (j * j) <= SQGridSize)
