@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CUDApi", "CUDA_Samples\CUDA_Samples.vcxproj", "{96E567BF-BDB6-4CAF-90D3-B2B7FBA1B675}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CUDAtests", "CUDAtests\CUDAtests.vcxproj", "{E64CC228-6D10-42BB-A97E-0C648C5BBCBF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPUpi", "CPUpi\CPUpi.vcxproj", "{66604286-D0DA-40CA-B7DD-067E215CE290}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPUtests", "CPUtests\CPUtests.vcxproj", "{368E3206-D2B2-4D74-ACAA-1410A3C7882B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96E567BF-BDB6-4CAF-90D3-B2B7FBA1B675}.Debug|Win32.ActiveCfg = Debug|Win32
+		{96E567BF-BDB6-4CAF-90D3-B2B7FBA1B675}.Debug|Win32.Build.0 = Debug|Win32
+		{96E567BF-BDB6-4CAF-90D3-B2B7FBA1B675}.Release|Win32.ActiveCfg = Release|Win32
+		{96E567BF-BDB6-4CAF-90D3-B2B7FBA1B675}.Release|Win32.Build.0 = Release|Win32
+		{E64CC228-6D10-42BB-A97E-0C648C5BBCBF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E64CC228-6D10-42BB-A97E-0C648C5BBCBF}.Debug|Win32.Build.0 = Debug|Win32
+		{E64CC228-6D10-42BB-A97E-0C648C5BBCBF}.Release|Win32.ActiveCfg = Release|Win32
+		{E64CC228-6D10-42BB-A97E-0C648C5BBCBF}.Release|Win32.Build.0 = Release|Win32
+		{66604286-D0DA-40CA-B7DD-067E215CE290}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66604286-D0DA-40CA-B7DD-067E215CE290}.Debug|Win32.Build.0 = Debug|Win32
+		{66604286-D0DA-40CA-B7DD-067E215CE290}.Release|Win32.ActiveCfg = Release|Win32
+		{66604286-D0DA-40CA-B7DD-067E215CE290}.Release|Win32.Build.0 = Release|Win32
+		{368E3206-D2B2-4D74-ACAA-1410A3C7882B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{368E3206-D2B2-4D74-ACAA-1410A3C7882B}.Debug|Win32.Build.0 = Debug|Win32
+		{368E3206-D2B2-4D74-ACAA-1410A3C7882B}.Release|Win32.ActiveCfg = Release|Win32
+		{368E3206-D2B2-4D74-ACAA-1410A3C7882B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

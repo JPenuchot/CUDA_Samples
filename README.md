@@ -10,13 +10,19 @@
 
 ##INSTALLATION :
 
- * Install VS2010/VC++ Express 2010
- * Install CUDA GPU Computing SDK 4.0
+###Visual Studio 2012 (Tested) :
+ * Install Microsoft Visual Studio Express 2012 for Windows Desktop
+ * Install CUDA GPU Computing Toolkit 5.0
+ * Read carefully this tutorial : 
+ http://blog.norture.com/2012/10/gpu-parallel-programming-in-vs2012-with-nvidia-cuda/
  * Open the .sln file
  * Press F7 to build the project
- 
-NB : I couldn't port it to VS2012 with CUDA 5.0 and I couldn't even make a CUDA project with this environment
-setting, if someone had this problem and solved it please let me know how.
+
+###Visual Studio 2010 (Not tested) :
+ * Install VS2010/VC++ Express 2010
+ * Install CUDA GPU Computing SDK 5.0
+ * Open the .sln file
+ * Press F7 to build the project
 
 ##WHAT'S IN THE BOX :
 
