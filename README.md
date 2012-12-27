@@ -2,10 +2,10 @@
 
 ##REQUIREMENTS :
 
- * Microsoft Visual C++ Express 2010/Visual Studio 2010
+ * Microsoft Visual Studio Express 2012 for Windows Desktop
  * CUDA enabled device (See list of CUDA devices on Nvidia website)
  * CUDA drivers (Get them on Nvidia website)
- * CUDA GPU Computing SDK 4.0 (Also on Nvidia website)
+ * CUDA GPU Computing SDK 5.0 (Also on Nvidia website)
  * **Brain.**
 
 ##INSTALLATION :
